@@ -3,134 +3,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Elements Example</title>
+    <title>Comprehensive HTML Elements Showcase</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-    background-color: black; /* Set the background color to black */
-    color: white; /* Optional: Set text color to white for better contrast */
-}
-h1, h2, h3, h4, h5, h6 {
-    color: #ddd; /* Optional: Lighten heading colors for better visibility */
-}
-p {
-    margin-bottom: 20px;
-}
-a {
-    color: #1E90FF; /* Optional: Change link color for better visibility */
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-blockquote {
-    border-left: 2px solid #444;
-    padding-left: 15px;
-    margin: 10px 0;
-    font-style: italic;
-}
-code {
-    background: #333;
-    color: #f4f4f4; /* Light text color for code */
-    padding: 2px 4px;
-    border-radius: 4px;
-}
-pre {
-    background: #333;
-    color: #f4f4f4; /* Light text color for preformatted text */
-    padding: 10px;
-    border-radius: 4px;
-    overflow-x: auto;
-}
-ul, ol {
-    margin: 10px 0;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-th, td {
-    border: 1px solid #444;
-    padding: 8px;
-}
-th {
-    background-color: #555;
-}
-form {
-    margin-top: 20px;
-}
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    background: #222;
-    color: white; /* Optional: Text color for input elements */
-    border: 1px solid #444;
-}
-input[type="submit"] {
-    background-color: #1E90FF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-input[type="submit"]:hover {
-    background-color: #1C86EE;
-}
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-.flex-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-footer ul li {
-    display: inline;
-}
-
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
-}
+        :root {
+            --primary-color: #1E90FF;
+            --secondary-color: #FF6B6B;
+            --accent-color: #4ECDC4;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #f0f0f0;
+            --border-color: #444;
+        }
         
-.flex-item {
-    flex: 1 1 200px;
-    padding: 10px;
-    border: 1px solid #444;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #ddd;
+            margin-top: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            background-color: rgba(78, 205, 196, 0.1);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        code {
+            background: #333;
+            color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        form {
+            margin-top: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #222;
+            color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.2);
+        }
+        
+        input[type="submit"], button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        input[type="submit"]:hover, button:hover {
+            background-color: #1C86EE;
+            transform: translateY(-2px);
+        }
+        
+        .flex-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        
+        .flex-item {
+            flex: 1 1 200px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .flex-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+        
+        .grid-item {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #333;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted var(--primary-color);
+            cursor: help;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .alert {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            border-left: 4px solid;
+        }
+        
+        .alert-success {
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left-color: #2ecc71;
+            color: #2ecc71;
+        }
+        
+        .alert-warning {
+            background-color: rgba(241, 196, 15, 0.1);
+            border-left-color: #f1c40f;
+            color: #f1c40f;
+        }
+        
+        .alert-error {
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left-color: #e74c3c;
+            color: #e74c3c;
+        }
+        
+        .alert-info {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left-color: #3498db;
+            color: #3498db;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+        }
+        
+        .nav-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-tab.active {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+            border-bottom: 1px solid var(--card-bg);
+            margin-bottom: -1px;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        .close-modal {
+            float: right;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #aaa;
+        }
+        
+        .close-modal:hover {
+            color: white;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        footer ul li {
+            display: inline;
+        }
+        
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer ul li a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .flex-container, .grid-container {
+                flex-direction: column;
+            }
+            
+            .flex-item, .grid-item {
+                flex: 1 1 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+        
+        /* Animation for elements */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        section, .card, .grid-item {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        /* Stagger animation for grid items */
+        .grid-item:nth-child(1) { animation-delay: 0.1s; }
+        .grid-item:nth-child(2) { animation-delay: 0.2s; }
+        .grid-item:nth-child(3) { animation-delay: 0.3s; }
+        .grid-item:nth-child(4) { animation-delay: 0.4s; }
+        .grid-item:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
@@ -138,274 +488,536 @@ footer ul li a:hover {
     <div class="container">
         <!-- Header section with main heading -->
         <header>
-            <h1>Comprehensive HTML Elements Example</h1>
+            <h1>Comprehensive HTML Elements Showcase</h1>
+            <p>A complete reference of HTML elements with modern styling</p>
         </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <h2>Quick Navigation</h2>
+            <div class="flex-container">
+                <a href="#headings" class="flex-item">Headings</a>
+                <a href="#text" class="flex-item">Text Elements</a>
+                <a href="#lists" class="flex-item">Lists</a>
+                <a href="#tables" class="flex-item">Tables</a>
+                <a href="#forms" class="flex-item">Forms</a>
+                <a href="#media" class="flex-item">Media</a>
+                <a href="#semantic" class="flex-item">Semantic HTML</a>
+                <a href="#interactive" class="flex-item">Interactive Elements</a>
+            </div>
+        </nav>
 
         <!-- Main content area -->
         <main>
             <!-- Section for headings -->
-            <section>
+            <section id="headings">
                 <h2>Headings</h2>
-                <h1>This is a Heading Level 1</h1>
-                <h2>This is a Heading Level 2</h2>
-                <h3>This is a Heading Level 3</h3>
-                <h4>This is a Heading Level 4</h4>
-                <h5>This is a Heading Level 5</h5>
-                <h6>This is a Heading Level 6</h6>
+                <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important).</p>
+                
+                <div class="card">
+                    <div class="card-header">Heading Examples</div>
+                    <h1>This is a Heading Level 1</h1>
+                    <h2>This is a Heading Level 2</h2>
+                    <h3>This is a Heading Level 3</h3>
+                    <h4>This is a Heading Level 4</h4>
+                    <h5>This is a Heading Level 5</h5>
+                    <h6>This is a Heading Level 6</h6>
+                </div>
             </section>
 
-            <!-- Section for paragraphs -->
-            <section>
-                <h2>Paragraphs</h2>
-                <p>This is a paragraph of text. Paragraphs are defined using the <code>&lt;p&gt;</code> tag. This tag automatically adds space before and after the paragraph.</p>
-                <p>Here is another paragraph to show how paragraphs are separated from each other.</p>
-            </section>
+            <!-- Section for text elements -->
+            <section id="text">
+                <h2>Text Elements</h2>
+                
+                <div class="card">
+                    <div class="card-header">Paragraphs</div>
+                    <p>This is a paragraph of text. Paragraphs are defined using the <code>&lt;p&gt;</code> tag. This tag automatically adds space before and after the paragraph.</p>
+                    <p>Here is another paragraph to show how paragraphs are separated from each other.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Text Formatting</div>
+                    <p><strong>This text is bold</strong> and <em>this text is italicized</em>.</p>
+                    <p><mark>This text is highlighted</mark> and <small>this text is smaller</small>.</p>
+                    <p><del>This text has been deleted</del> and <ins>this text has been inserted</ins>.</p>
+                    <p>Chemical formula: H<sub>2</sub>O and mathematical equation: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Links</div>
+                    <p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more information.</p>
+                    <p>You can also create <a href="#top">internal links</a> to navigate within the same page.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Blockquotes</div>
+                    <blockquote>
+                        "This is a blockquote. Blockquotes are used to highlight text that is quoted from another source. They typically have indentation and special styling."
+                        <footer>- Author Name</footer>
+                    </blockquote>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Code Examples</div>
+                    <p>Inline code can be added using the <code>&lt;code&gt;</code> tag. For example, <code>&lt;div&gt;</code> is an HTML element.</p>
+                    <pre><code>
+function greet(name) {
+    // This is a JavaScript function
+    console.log("Hello, " + name + "!");
+    return "Greeting sent to " + name;
+}
 
-            <!-- Section for links -->
-            <section>
-                <h2>Links</h2>
-                <p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more information.</p>
-            </section>
-
-            <!-- Section for images -->
-            <section>
-                <h2>Images</h2>
-                <p>Here is an example of an image:</p>
-                <img src="https://th.bing.com/th/id/OIP.GExA9KOlfHg7m5bOd_eO6gHaDt?rs=1&pid=ImgDetMain" alt="Placeholder Image" width="300">
+// Call the function
+greet("World");
+                    </code></pre>
+                </div>
             </section>
 
             <!-- Section for lists -->
-            <section>
+            <section id="lists">
                 <h2>Lists</h2>
-                <h3>Unordered List</h3>
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                    <li>Item 4</li>
-                    <li>Item 5</li>
-                </ul>
-
-                <h3>Ordered List</h3>
-                <ol>
-                    <li>First item</li>
-                    <li>Second item</li>
-                    <li>Third item</li>
-                    <li>Fourth item</li>
-                    <li>Fifth item</li>
-                </ol>
-            </section>
-
-            <!-- Section for blockquotes -->
-            <section>
-                <h2>Blockquotes</h2>
-                <blockquote>
-                    "This is a blockquote. Blockquotes are used to highlight text that is quoted from another source."
-                </blockquote>
-            </section>
-
-            <!-- Section for code examples -->
-            <section>
-                <h2>Code</h2>
-                <p>Inline code can be added using the <code>&lt;code&gt;</code> tag. For example, <code>&lt;div&gt;</code> is an HTML element.</p>
-                <pre><code>
-function greet() {
-    console.log("Hello, world!");
-}
-                </code></pre>
+                
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <h3>Unordered List</h3>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                            <li>Item 4</li>
+                            <li>Item 5</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex-item">
+                        <h3>Ordered List</h3>
+                        <ol>
+                            <li>First item</li>
+                            <li>Second item</li>
+                            <li>Third item</li>
+                            <li>Fourth item</li>
+                            <li>Fifth item</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="flex-item">
+                        <h3>Description List</h3>
+                        <dl>
+                            <dt>HTML</dt>
+                            <dd>HyperText Markup Language</dd>
+                            <dt>CSS</dt>
+                            <dd>Cascading Style Sheets</dd>
+                            <dt>JS</dt>
+                            <dd>JavaScript</dd>
+                        </dl>
+                    </div>
+                </div>
             </section>
 
             <!-- Section for tables -->
-            <section>
+            <section id="tables">
                 <h2>Tables</h2>
                 <p>Tables are used to display tabular data. Here is an example of a table:</p>
+                
                 <table>
                     <thead>
                         <tr>
-                            <th>Header 1</th>
-                            <th>Header 2</th>
-                            <th>Header 3</th>
-                            <th>Header 4</th>
-                            <th>Header 5</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Row 1, Cell 1</td>
-                            <td>Row 1, Cell 2</td>
-                            <td>Row 1, Cell 3</td>
-                            <td>Row 1, Cell 4</td>
-                            <td>Row 1, Cell 5</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>Admin</td>
+                            <td><span class="badge">Active</span></td>
+                            <td><button class="small-btn">Edit</button></td>
                         </tr>
                         <tr>
-                            <td>Row 2, Cell 1</td>
-                            <td>Row 2, Cell 2</td>
-                            <td>Row 2, Cell 3</td>
-                            <td>Row 2, Cell 4</td>
-                            <td>Row 2, Cell 5</td>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                            <td>User</td>
+                            <td><span class="badge" style="background-color: #FF6B6B;">Inactive</span></td>
+                            <td><button class="small-btn">Edit</button></td>
                         </tr>
                         <tr>
-                            <td>Row 3, Cell 1</td>
-                            <td>Row 3, Cell 2</td>
-                            <td>Row 3, Cell 3</td>
-                            <td>Row 3, Cell 4</td>
-                            <td>Row 3, Cell 5</td>
+                            <td>Bob Johnson</td>
+                            <td>bob@example.com</td>
+                            <td>Editor</td>
+                            <td><span class="badge">Active</span></td>
+                            <td><button class="small-btn">Edit</button></td>
                         </tr>
                         <tr>
-                            <td>Row 4, Cell 1</td>
-                            <td>Row 4, Cell 2</td>
-                            <td>Row 4, Cell 3</td>
-                            <td>Row 4, Cell 4</td>
-                            <td>Row 4, Cell 5</td>
-                        </tr>
-                        <tr>
-                            <td>Row 5, Cell 1</td>
-                            <td>Row 5, Cell 2</td>
-                            <td>Row 5, Cell 3</td>
-                            <td>Row 5, Cell 4</td>
-                            <td>Row 5, Cell 5</td>
+                            <td>Alice Brown</td>
+                            <td>alice@example.com</td>
+                            <td>User</td>
+                            <td><span class="badge">Active</span></td>
+                            <td><button class="small-btn">Edit</button></td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
             <!-- Section for forms -->
-            <section>
+            <section id="forms">
                 <h2>Forms</h2>
-                <p>Forms are used to collect user input. Here is an example of a form:</p>
-                <form action="/submit" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-
-                    <label for="options">Options:</label>
-                    <select id="options" name="options">
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                        <option value="option4">Option 4</option>
-                        <option value="option5">Option 5</option>
-                    </select>
-
-                    <input type="submit" value="Submit">
+                <p>Forms are used to collect user input. Here is an example of a comprehensive form:</p>
+                
+                <form id="example-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="birthdate">Date of Birth:</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <option value="">Select a country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Interests:</label>
+                        <div>
+                            <input type="checkbox" id="interest1" name="interests" value="technology">
+                            <label for="interest1">Technology</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest2" name="interests" value="sports">
+                            <label for="interest2">Sports</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest3" name="interests" value="music">
+                            <label for="interest3">Music</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest4" name="interests" value="travel">
+                            <label for="interest4">Travel</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message here..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file">Upload File:</label>
+                        <input type="file" id="file" name="file">
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="subscribe" name="subscribe" checked>
+                        <label for="subscribe">Subscribe to newsletter</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" value="Submit Form">
+                        <button type="reset">Reset Form</button>
+                    </div>
                 </form>
             </section>
 
-            <!-- Section for inline styles -->
-            <section>
-                <h2>Inline Styles</h2>
-                <p style="color: red;">This paragraph has inline styling to change its text color to red.</p>
+            <!-- Section for media -->
+            <section id="media">
+                <h2>Media Elements</h2>
+                
+                <div class="card">
+                    <div class="card-header">Images</div>
+                    <p>Here is an example of an image with responsive sizing:</p>
+                    <img src="https://via.placeholder.com/800x400/1E90FF/FFFFFF?text=Responsive+Image" alt="Placeholder Image" style="max-width: 100%; height: auto; border-radius: 8px;">
+                    <p style="text-align: center; margin-top: 10px;"><small>This image will scale to fit its container</small></p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Audio</div>
+                    <p>The <code>&lt;audio&gt;</code> element is used to embed audio content:</p>
+                    <audio controls style="width: 100%;">
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Video</div>
+                    <p>The <code>&lt;video&gt;</code> element is used to embed video content:</p>
+                    <video controls style="width: 100%; max-width: 600px; border-radius: 8px;">
+                        <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Embedded Content</div>
+                    <p>The <code>&lt;iframe&gt;</code> element can be used to embed another HTML document within the current page:</p>
+                    <iframe src="https://www.example.com" width="100%" height="300" title="Example Website" style="border: 1px solid var(--border-color); border-radius: 8px;"></iframe>
+                </div>
             </section>
 
             <!-- Section for semantic elements -->
-            <section>
-                <h2>Semantic Elements</h2>
-                <article>
-                    <h3>Article Heading</h3>
-                    <p>This is an article section. Articles are used for self-contained content.</p>
-                </article>
-                <aside>
-                    <h3>Aside Section</h3>
-                    <p>This is an aside section. Asides are used for content indirectly related to the main content.</p>
-                </aside>
-                <details>
-                    <summary>Details Summary</summary>
-                    <p>This content is hidden by default and revealed when the summary is clicked.</p>
-                </details>
-                <figcaption>
-                    <p>This is a figcaption. Figcaptions are used to describe a figure element.</p>
-                </figcaption>
-                <figure>
-                    <img src="https://th.bing.com/th/id/OIP.GExA9KOlfHg7m5bOd_eO6gHaDt?rs=1&pid=ImgDetMain" alt="Placeholder Image">
-                    <figcaption>Placeholder Image Description</figcaption>
-                </figure>
+            <section id="semantic">
+                <h2>Semantic HTML Elements</h2>
+                <p>Semantic HTML elements clearly describe their meaning to both the browser and developer.</p>
+                
+                <div class="card">
+                    <div class="card-header">Article Element</div>
+                    <article>
+                        <h3>Article Heading</h3>
+                        <p>This is an article section. Articles are used for self-contained content that could be distributed independently.</p>
+                        <p>Examples include blog posts, news articles, or forum posts.</p>
+                    </article>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Aside Element</div>
+                    <aside>
+                        <h3>Aside Section</h3>
+                        <p>This is an aside section. Asides are used for content indirectly related to the main content, like sidebars or pull quotes.</p>
+                    </aside>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Details & Summary</div>
+                    <details>
+                        <summary>Click to expand details</summary>
+                        <p>This content is hidden by default and revealed when the summary is clicked. It's useful for FAQ sections or additional information that doesn't need to be immediately visible.</p>
+                    </details>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Figure & Figcaption</div>
+                    <figure>
+                        <img src="https://via.placeholder.com/400x200/4ECDC4/FFFFFF?text=Example+Figure" alt="Example Figure" style="width: 100%; max-width: 400px; border-radius: 8px;">
+                        <figcaption>This is a figcaption describing the figure above.</figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <!-- Section for embedded content -->
-            <section>
-                <h2>Embedded Content</h2>
-                <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
-                <embed src="example.pdf" type="application/pdf" width="600" height="400" alt="Example PDF">
+            <!-- Section for interactive elements -->
+            <section id="interactive">
+                <h2>Interactive Elements</h2>
+                
+                <div class="card">
+                    <div class="card-header">Progress Bars</div>
+                    <p>Progress bars show the completion progress of a task:</p>
+                    <label for="progress1">HTML Knowledge:</label>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    
+                    <label for="progress2">CSS Skills:</label>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    
+                    <label for="progress3">JavaScript Proficiency:</label>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Tooltips</div>
+                    <p>Hover over the following text to see a tooltip: <span class="tooltip">Hover me<span class="tooltiptext">This is a tooltip with additional information!</span></span></p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Alerts & Notifications</div>
+                    <div class="alert alert-success">
+                        <strong>Success!</strong> This is a success alert.
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Info!</strong> This is an information alert.
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> This is a warning alert.
+                    </div>
+                    <div class="alert alert-error">
+                        <strong>Error!</strong> This is an error alert.
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Tabs</div>
+                    <div class="nav-tabs">
+                        <div class="nav-tab active" data-tab="tab1">Tab 1</div>
+                        <div class="nav-tab" data-tab="tab2">Tab 2</div>
+                        <div class="nav-tab" data-tab="tab3">Tab 3</div>
+                    </div>
+                    <div class="tab-content active" id="tab1">
+                        <h3>Tab 1 Content</h3>
+                        <p>This is the content for the first tab.</p>
+                    </div>
+                    <div class="tab-content" id="tab2">
+                        <h3>Tab 2 Content</h3>
+                        <p>This is the content for the second tab.</p>
+                    </div>
+                    <div class="tab-content" id="tab3">
+                        <h3>Tab 3 Content</h3>
+                        <p>This is the content for the third tab.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">Modal Dialog</div>
+                    <button id="open-modal">Open Modal</button>
+                    
+                    <div class="modal" id="example-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h2>Modal Title</h2>
+                            <p>This is a modal dialog. It appears on top of the page content and requires user interaction to dismiss.</p>
+                            <button id="close-modal">Close Modal</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- Section for script and noscript -->
+            <!-- Section for CSS Grid -->
             <section>
-                <h2>Script and NoScript</h2>
-                <p>JavaScript can be included using the <code>&lt;script&gt;</code> tag. If JavaScript is not enabled, the <code>&lt;noscript&gt;</code> tag provides alternative content:</p>
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        console.log("JavaScript is enabled.");
+                <h2>CSS Grid Layout</h2>
+                <p>CSS Grid provides a two-dimensional layout system for the web:</p>
+                
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <h3>Grid Item 1</h3>
+                        <p>This is the first grid item with some sample content.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Grid Item 2</h3>
+                        <p>This is the second grid item with some sample content.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Grid Item 3</h3>
+                        <p>This is the third grid item with some sample content.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Grid Item 4</h3>
+                        <p>This is the fourth grid item with some sample content.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Grid Item 5</h3>
+                        <p>This is the fifth grid item with some sample content.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer section -->
+        <footer>
+            <p>Comprehensive HTML Elements Showcase &copy; 2023</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+        
+        // Modal functionality
+        const modal = document.getElementById('example-modal');
+        const openModalBtn = document.getElementById('open-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const closeModalSpan = document.querySelector('.close-modal');
+        
+        openModalBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+        
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        closeModalSpan.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Form validation
+        const form = document.getElementById('example-form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Form submitted successfully! (This is a demo, no data was actually sent)');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
                     });
-                </script>
-                <noscript>
-                    <p>JavaScript is disabled or not supported by your browser. Some functionality may not work.</p>
-                </noscript>
-            </section>
-
-            <!-- Section for iframes -->
-            <section>
-                <h2>Embedded Frames</h2>
-                <p>The <code>&lt;iframe&gt;</code> element can be used to embed another HTML document within the current page.</p>
-                <iframe src="https://www.example.com" width="600" height="400" title="Example Website"></iframe>
-            </section>
-
-            <!-- Section for audio and video -->
-            <section>
-                <h2>Audio and Video</h2>
-                <p>The <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements are used to embed media content:</p>
-                <h3>Audio Example</h3>
-                <audio controls>
-                    <source src="Audio_Example.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
-                <h3>Video Example</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/HGTJBPNC-Gw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </video>
-            </section>
-
-            <!-- Section for data attributes -->
-            <section>
-                <h2>Data Attributes</h2>
-                <p>Custom data attributes can be added to HTML elements using the <code>data-</code> prefix:</p>
-                <div data-info="This is a custom data attribute" data-type="example">
-                    <p>Hover over this text to see custom data attributes in action.</p>
-                </div>
-            </section>
-
-            <!-- Section for meta tags -->
-            <section>
-                <h2>Meta Tags</h2>
-                <p>Meta tags are used in the <code>&lt;head&gt;</code> section to provide metadata about the document:</p>
-                <ul>
-                    <li><code>&lt;meta charset="UTF-8"&gt;</code>: Specifies the character encoding.</li>
-                    <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Sets the viewport for responsive design.</li>
-                    <li><code>&lt;meta name="description" content="A comprehensive example of HTML elements"&gt;</code>: Provides a description of the page content.</li>
-                </ul>
-            </section>
-
-            <!-- Section for custom attributes and classes -->
-            <section>
-                <h2>Custom Attributes and Classes</h2>
-                <p>HTML elements can have custom attributes and classes:</p>
-                <div class="flex-container">
-                    <div class="flex-item" data-custom="value1">Flex Item 1</div>
-                    <div class="flex-item" data-custom="value2">Flex Item 2</div>
-                    <div class="flex-item" data-custom="value3">Flex Item 3</div>
-                    <div class="flex-item" data-custom="value4">Flex Item 4</div>
-                    <div class="flex-item" data-custom="value5">Flex Item 5</div>
-                </div>
-            </section>
-            </main>
-
-            <!-- Footer section -->
-            <footer>
-            <p>This Is A Footer</p>
-            </footer>
-            </div>
-            </body>
+                }
+            });
+        });
+    </script>
+</body>
 </html>
